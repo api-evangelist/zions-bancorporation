@@ -1,0 +1,44 @@
+aid: zions-bancorporation
+url: https://raw.githubusercontent.com/api-evangelist/zions-bancorporation/refs/heads/main/apis.yml
+name: Zions Bancorporation
+kind: company
+description: >-
+  Zions Bancorporation, National Association is a nationally chartered bank and
+  bank holding company headquartered in Salt Lake City, Utah, with roughly $87
+  billion in total assets. It is a super-regional operating a single national
+  bank charter across seven regional divisional brands - Zions Bank, Amegy Bank,
+  California Bank & Trust, National Bank of Arizona, Nevada State Bank, Vectra
+  Bank Colorado, and The Commerce Bank of Washington - serving consumers, small
+  business, and commercial/treasury clients across the Western United States. On
+  the open-finance front Zions runs NO public first-party developer API portal:
+  developer.zionsbank.com and api.zionsbank.com do not resolve, and its business
+  digital-banking surface (Treasury Internet Banking at treasurygateway.zionsbank.com)
+  is credential-gated with no published API reference or downloadable OpenAPI.
+  As a large depository institution it is subject to the CFPB Section 1033
+  Personal Financial Data Rights rule, but Zions has not published a first-party
+  data-access API or a documented FDX-conformant endpoint; consumer-permissioned
+  data sharing in practice reaches Zions through third-party aggregators
+  (Plaid/MX/Finicity/Akoya) rather than a first-party API surface.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Financial Services
+- Banking
+- United States
+- Super-Regional Bank
+- Treasury Management
+- Open Finance
+- Data Aggregation
+created: '2026-07-23'
+modified: '2026-07-23'
+specificationVersion: '0.19'
+apis: []
+common:
+- type: Website
+  url: https://www.zionsbancorporation.com/
+- type: Documentation
+  url: https://www.zionsbank.com/business/treasury/treasury-internet-banking/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/zions-bancorporation
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

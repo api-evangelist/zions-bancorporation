@@ -1,0 +1,97 @@
+aid: zions-bancorporation
+name: Zions Bancorporation
+review:
+  question: Does Zions Bancorporation expose a public first-party developer API, downloadable specs, or a documented FDX / Section 1033 data-access endpoint?
+  answer: false
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    Zions Bancorporation, N.A. (a nationally chartered super-regional bank, ~$87B
+    in assets, HQ Salt Lake City, operating seven divisional bank brands) exposes
+    NO public first-party developer API and runs NO developer portal. Probes of
+    developer.zionsbank.com, developer.zionsbancorporation.com, and
+    api.zionsbank.com all fail to resolve (connection/DNS, HTTP 000). The only
+    business-facing digital surface is Treasury Internet Banking - a
+    credential-gated commercial web/portal product (login at
+    treasurygateway.zionsbank.com) covering ACH, wires, account transfers,
+    positive pay, cash position, and ERP file import/export - which publishes no
+    public API reference and no downloadable OpenAPI/Swagger. No first-party
+    OpenAPI, Swagger, Postman collection, SDK, or API reference was found to
+    harvest. As a large depository institution Zions is within scope of the CFPB
+    Section 1033 Personal Financial Data Rights rule, but it has published no
+    first-party data-access API and no documented FDX-conformant endpoint. FDX
+    membership for Zions could not be confirmed from public sources and is NOT
+    asserted here. In practice, consumer-permissioned data sharing reaches Zions
+    through third-party aggregators (Plaid, MX, Finicity, Akoya), not a
+    first-party API. This is an honest identity-only, aggregator-only record.
+  posture:
+    firstPartyDeveloperPortal: false
+    developerPortalURL: null
+    downloadableSpecs: false
+    fdxParticipantConfirmed: false
+    section1033Posture: >-
+      In scope as a large depository institution under the CFPB Section 1033
+      rule, but no first-party data-access API or public 1033 implementation
+      posture is published by Zions.
+    aggregatorAccess: >-
+      Consumer-permissioned data sharing occurs via third-party aggregators
+      (Plaid / MX / Finicity / Akoya), not a documented first-party Zions API.
+    authModel: >-
+      Not applicable to any public API - none exists. Treasury Internet Banking
+      is username/password + MFA credential-gated for existing commercial clients.
+    specProvenance: >-
+      None. No OpenAPI/Swagger was harvested because none is publicly published.
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No public REST API is documented by Zions Bancorporation.
+    - protocol: FDX
+      scheme: https
+      documented: false
+      note: No documented FDX-conformant data-access endpoint; FDX participation not confirmed.
+  probes:
+    - url: https://developer.zionsbank.com
+      status: 000
+      note: Does not resolve (no developer portal).
+    - url: https://developer.zionsbancorporation.com
+      status: 000
+      note: Does not resolve.
+    - url: https://api.zionsbank.com
+      status: 000
+      note: Does not resolve (no public API host).
+    - url: https://developer.zionsbancorp.com
+      status: 000
+      note: Does not resolve.
+    - url: https://www.zionsbancorporation.com/
+      status: 403
+      note: Corporate site is live but bot-blocks unauthenticated crawlers (real page).
+    - url: https://www.zionsbank.com/business/treasury/treasury-internet-banking/
+      status: 403
+      note: Real Treasury Internet Banking product page; bot-blocked to crawlers. Credential-gated, no public API reference.
+    - url: https://www.linkedin.com/company/zions-bancorporation
+      status: 200
+      note: Company LinkedIn page (live).
+    - url: https://github.com/zionsbancorporation
+      status: 404
+      note: No public GitHub organization.
+sources:
+  - url: https://www.zionsbancorporation.com/
+    type: Website
+    note: Corporate / investor relations site for the bank holding company.
+  - url: https://www.zionsbank.com/business/treasury/treasury-internet-banking/
+    type: Documentation
+    note: Treasury Internet Banking product page - credential-gated business banking, no public API.
+  - url: https://financialdataexchange.org/cfpb-1033/
+    type: Reference
+    note: FDX / CFPB Section 1033 background for US open-finance context (Zions not confirmed as a member).
+actions:
+  apisYmlUpdated: true
+  openapiHarvested: false
+  reason: |
+    No public first-party API, developer portal, or downloadable specification
+    exists for Zions Bancorporation, so apis[] is empty and the openapi/
+    directory holds no harvested specs. The record is intentionally identity-only
+    and documents the honest aggregator-only / no-public-API posture rather than
+    fabricating an API surface.
