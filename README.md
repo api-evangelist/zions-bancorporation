@@ -1,4 +1,4 @@
-# Zions Bancorporation (zions-bancorporation)
+# Zions Bancorporation
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,45 +64,80 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Zions Bancorporation, National Association is a nationally chartered bank and bank holding company headquartered in Salt Lake City, Utah, with roughly $87 billion in total assets. It operates a single national bank charter across seven regional divisional brands - Zions Bank, Amegy Bank, California Bank & Trust, National Bank of Arizona, Nevada State Bank, Vectra Bank Colorado, and The Commerce Bank of Washington - serving consumer, small business, and commercial/treasury clients across the Western United States.
+Zions Bancorporation, National Association is a nationally chartered bank and bank holding company headquartered in Salt Lake City, Utah, with roughly $87 billion in total assets. It is a super-regional operating a single national bank charter across seven regional divisional brands - Zions Bank, Amegy Bank, California Bank & Trust, National Bank of Arizona, Nevada State Bank, Vectra Bank Colorado, and The Commerce Bank of Washington - serving consumers, small business, and commercial/treasury clients across the Western United States. On the open-finance front Zions runs NO public first-party developer API portal: developer.zionsbank.com and api.zionsbank.com do not resolve, and its business digital-banking surface (Treasury Internet Banking at treasurygateway.zionsbank.com) is credential-gated with no published API reference or downloadable OpenAPI. As a large depository institution it is subject to the CFPB Section 1033 Personal Financial Data Rights rule, but Zions has not published a first-party data-access API or a documented FDX-conformant endpoint; consumer-permissioned data sharing in practice reaches Zions through third-party aggregators (Plaid/MX/Finicity/Akoya) rather than a first-party API surface.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/zions-bancorporation/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/zions-bancorporation/refs/heads/main/apis.yml)
+**Areas:** Financial Services · Banking · United States · Super-Regional Bank · Treasury Management · Open Finance
 
-## Open-Finance / API Posture
+## Zions Bancorporation on APIs.io
 
-Zions Bancorporation exposes **no public first-party developer API**. There is no developer portal:
+Everything profiled for Zions Bancorporation is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/zions-bancorporation/](https://apis.io/providers/zions-bancorporation/)** — or go straight to one of the APIs or properties below.
 
-- `developer.zionsbank.com`, `developer.zionsbancorporation.com`, and `api.zionsbank.com` do not resolve (DNS/connection failure).
-- The business digital-banking surface, **Treasury Internet Banking** (login at `treasurygateway.zionsbank.com`), is credential-gated for existing commercial clients. It supports ACH, domestic/international wire transfers, account transfers, positive pay, real-time cash position, and ERP file import/export - but publishes **no public API reference and no downloadable OpenAPI/Swagger**.
+### Published properties
 
-As a large depository institution, Zions falls under the CFPB **Section 1033** Personal Financial Data Rights rule, but it has not published a first-party data-access API or a documented FDX-conformant endpoint. In practice, consumer-permissioned data sharing reaches Zions through third-party **aggregators** (Plaid, MX, Finicity, Akoya) rather than a first-party API. This record is therefore identity-only and honest: no public API surface was harvested.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Tags
+#### Security (1)
 
-- Financial Services
-- Banking
-- United States
-- Super-Regional Bank
-- Treasury Management
-- Open Finance
-- Data Aggregation
+Authentication, trust centre, and vulnerability disclosure.
 
-## Timestamps
+- [Zions Bancorporation Domain Security](https://apis.io/security/zions-bancorporation/zions-bancorporation-domain-security/)
 
-- **Created:** 2026-07-23
-- **Modified:** 2026-07-23
+## Where to find this API
 
-## APIs
-
-None. No public first-party developer API is documented. See the open-finance posture above.
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.zionsbancorporation.com/)
 - [Documentation](https://www.zionsbank.com/business/treasury/treasury-internet-banking/)
-- [LinkedIn](https://www.linkedin.com/company/zions-bancorporation)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 4.4** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 9.5 |
+| Access clarity | 0.0 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 4.7** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/zions-bancorporation/](https://apis.io/providers/zions-bancorporation/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Zions Bancorporation: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/zions-bancorporation/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
